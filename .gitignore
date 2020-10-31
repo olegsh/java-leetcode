@@ -12,3 +12,6 @@
 
 # build
 build
+
+# Ignore gradle files
+.gradle
