@@ -1,0 +1,14 @@
+# Mac related
+.DS_Store
+
+# Ignore junk files
+*.bak
+# Ignore local git config
+.gitconfig
+
+# IDE files
+.vscode
+.idea
+
+# build
+build
