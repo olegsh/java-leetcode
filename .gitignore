@@ -9,9 +9,18 @@
 # IDE files
 .vscode
 .idea
+*.iml
+*.ipr
+*.iws
+
+# Idea uses the out directory instead of build
+out
 
 # build
 build
 
-# Ignore gradle files
+# Gradle builds into a 'build' directory
 .gradle
+
+# Emacs users ...
+*~

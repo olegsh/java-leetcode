@@ -1,8 +1,9 @@
 plugins {
     id 'java'
+    id 'idea'
 }
 
-group 'org.example'
+group 'leetcode'
 version '1.0-SNAPSHOT'
 
 repositories {

@@ -1,4 +1,4 @@
-package addtwonumbers;
+package leetcode.addtwonumbers;
 
 import structures.ListNode;
 
