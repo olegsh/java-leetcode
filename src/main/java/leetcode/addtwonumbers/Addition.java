@@ -37,26 +37,4 @@ public class Addition {
     }
     return res;
   }
-
-
-
-  public static void main(String [] args) {
-    Addition addition = new Addition();
-    ListNode<Integer> n1 = new ListNode<>(5);
-    Helper.add2Node(n1, 4);
-    Helper.add2Node(n1, 4);
-    Helper.add2Node(n1, 2);
-    Helper.add2Node(n1, 7);
-    Helper.add2Node(n1, 8);
-    Helper.add2Node(n1, 0);
-    Helper.add2Node(n1, 1);
-    System.out.println();
-    ListNode<Integer> n2 = new ListNode<>(5);
-    Helper.add2Node(n2, 6);
-    Helper.add2Node(n2, 4);
-    ListNode<Integer> answ = addition.addTwoNumbers(n1, n2);
-    System.out.println(answ.toString());
-    System.out.println(Helper.convertListNode(answ));
-  }
-
 }
