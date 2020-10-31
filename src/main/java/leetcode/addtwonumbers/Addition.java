@@ -1,6 +1,6 @@
 package leetcode.addtwonumbers;
 
-import structures.ListNode;
+import leetcode.structures.ListNode;
 
 /**
  * Definition for singly-linked list.
@@ -33,7 +33,7 @@ public class Addition {
         sum += l2.getData();
         l2 = l2.getNext();
       }
-      res = add2Node(res, sum % 10);
+      res = Helper.add2Node(res, sum % 10);
     }
     return res;
   }
@@ -43,33 +43,20 @@ public class Addition {
   public static void main(String [] args) {
     Addition addition = new Addition();
     ListNode<Integer> n1 = new ListNode<>(5);
-    addition.add2Node(n1, 4);
-    addition.add2Node(n1, 2);
-    addition.add2Node(n1, 7);
-    addition.add2Node(n1, 8);
-    addition.add2Node(n1, 0);
-    addition.add2Node(n1, 1);
+    Helper.add2Node(n1, 4);
+    Helper.add2Node(n1, 4);
+    Helper.add2Node(n1, 2);
+    Helper.add2Node(n1, 7);
+    Helper.add2Node(n1, 8);
+    Helper.add2Node(n1, 0);
+    Helper.add2Node(n1, 1);
     System.out.println();
     ListNode<Integer> n2 = new ListNode<>(5);
-    addition.add2Node(n2, 6);
-    addition.add2Node(n2, 4);
+    Helper.add2Node(n2, 6);
+    Helper.add2Node(n2, 4);
     ListNode<Integer> answ = addition.addTwoNumbers(n1, n2);
     System.out.println(answ.toString());
+    System.out.println(Helper.convertListNode(answ));
   }
 
-  private ListNode<Integer> add2Node(ListNode<Integer> node, Integer value) {
-    if (node == null) {
-      return new ListNode<>(value);
-    }
-    if (node.getNext() == null) {
-      node.setNext(new ListNode<>(value));
-    } else {
-      ListNode<Integer> curr = node;
-      while (curr.getNext() != null) {
-        curr = curr.getNext();
-      }
-      curr.setNext(new ListNode<>(value));
-    }
-    return node;
-  }
 }
